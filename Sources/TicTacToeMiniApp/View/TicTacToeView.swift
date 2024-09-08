@@ -205,7 +205,6 @@ extension TicTacToeView: UICollectionViewDataSource {
     
     private func configureCell(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
         let board = viewModel.boardSubject.value
-        cell.contentView.backgroundColor = .white
         
         if let player = board[indexPath.row][indexPath.section].player {
             cell.contentView.subviews.forEach { $0.removeFromSuperview() }
