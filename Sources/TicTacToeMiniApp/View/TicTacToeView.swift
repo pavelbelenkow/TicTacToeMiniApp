@@ -7,6 +7,7 @@ final class TicTacToeView: UIView {
     private lazy var boardCollectionView: UICollectionView = {
         let layout = createCompositionalLayout()
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = .clear
         view.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Const.boardCellReuseIdentifier)
         view.delegate = self
         view.dataSource = self
